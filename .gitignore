@@ -1,0 +1,70 @@
+﻿# Python virtual environments
+.venv/
+venv/
+env/
+semcom/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables and secrets
+.env
+.streamlit/secrets.toml
+
+# Datasets (keep locally)
+datasets/
+data/
+
+# Model files: exclude by default
+*.pth
+*.pt
+*.h5
+*.onnx
+*.pkl
+*.safetensors
+
+# Allow required trained models
+!image_models/autoencoder.pth
+!image_models/classifier.pth
+!image_models/feature_extractor.pth
+!video_models/video_action_model.pth
+!text_models/models/bert_semantic_model/model.safetensors
+
+# BERT model directory: allow only required files
+text_models/models/*
+!text_models/models/bert_semantic_model/
+text_models/models/bert_semantic_model/*
+!text_models/models/bert_semantic_model/config.json
+!text_models/models/bert_semantic_model/model.safetensors
+!text_models/models/bert_semantic_model/special_tokens_map.json
+!text_models/models/bert_semantic_model/tokenizer_config.json
+!text_models/models/bert_semantic_model/vocab.txt
+
+# Generated features
+*.npy
+*.npz
+
+# Large media
+*.avi
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+
+# Generated outputs
+outputs/
+results/
+temp/
+logs/
+
+# IDE files
+.vscode/
+.idea/
+
+# Windows files
+Thumbs.db
+desktop.ini
